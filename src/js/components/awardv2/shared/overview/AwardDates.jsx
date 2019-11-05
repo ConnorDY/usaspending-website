@@ -102,10 +102,10 @@ export default class AwardDates extends React.Component {
     }
 
     render() {
-        const { dates, awardType } = this.props;
+        const { dates } = this.props;
         const { startDate, endDate } = this.datesByAwardType();
         const { timeline, remainingText, remainingLabel } = this.timelineInfo(startDate, endDate);
-        const tooltipInfo = getToolTipBySectionAndAwardType('dates', awardType);
+        const tooltipInfo = this.tooltipInfo();
         const datesTitles = this.titles();
 
         return (
